@@ -1,0 +1,83 @@
+/*basic CSS to Style the clock : making it centered and visually appealing*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: #61dafb;
+    font-family: Arial, sans-serif;
+
+}
+
+.clock-container {
+    text-align: center;
+
+}
+
+.clock {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
+}
+
+.date {
+    font-size: 3rem;
+    margin-top: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body.light-mode {
+    background-color: #f5f5f5;
+    color: #282c34;
+}
+
+#modeToggle {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #61dafb;
+    color: #282c34;
+    transition: background-color 0.3s ease;
+}
+
+#modeToggle:hover {
+    background-color: #f3f4f5;
+}
